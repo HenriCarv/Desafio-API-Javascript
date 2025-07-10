@@ -121,8 +121,8 @@
   "body": {
     "message": "Cadastro realizado com sucesso",
     "_id": "bVX8N0PqjGc6loX4"
-  }
-  ```
+  }```
+  
   
    e. Exclusão de Usuário (DELETE /usuarios/{id}):
    - Excluir um usuário existente com sucesso
