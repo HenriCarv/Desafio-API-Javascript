@@ -115,13 +115,12 @@
    - Atualizar um usuário existente com sucesso
    - FAIL - Tentar atualizar um usuário inexistente (Teste não passou, ao tentar mudar um usuario com ID inexistente a API responde 
    
-   ```
    Response: {
   "statusCode": 201,
   "body": {
     "message": "Cadastro realizado com sucesso",
     "_id": "bVX8N0PqjGc6loX4"
-  }```
+  }
   
   
    e. Exclusão de Usuário (DELETE /usuarios/{id}):
