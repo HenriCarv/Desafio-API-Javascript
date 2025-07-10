@@ -19,43 +19,8 @@ npm run test ; npm run report - Para rodar todos os testes e ter um report.
 npm run loginFail ; npm run report - Para rodar teste expecifico e ter o report.
 
 ## Estrutura do Projeto
-`
-├── .github
-│   └── workflows
-│       └── node-tests.yml
-├── features
-│   └── user
-│       ├── DeleteUserWithId.feature
-│       ├── DeleteUserWithIdNonExistent.feature
-│       ├── GetShowAllUsers.feature
-│       ├── GetShowUserWithId.feature
-│       ├── GetShowUserWithIdNonExistent.feature
-│       ├── PostCreateNewAdminUser.feature
-│       ├── PostCreateNewUser.feature
-│       ├── PostLogin.feature
-│       ├── PostLoginFail.feature
-│       ├── PostTryCreateUserExisting.feature
-│       ├── PostTryCreateUserWithInvalidInformations.feature
-│       ├── PutChangeUserNonExistent.feature
-│       └── PutChangeUserWithId.feature
-├── page_objects
-│   └── EndPoints.js
-├── step_definitions
-│   ├── CreateNewUser_steps.js
-│   ├── DeleteUserWithId_steps.js
-│   ├── ShowAllUsers_steps.js
-│   ├── UserChange_steps.js
-│   └── ShowUserWithId_steps.js
-├── support
-│   └── world.js
-├── .gitignore
-├── cucumber.js
-├── cucumber_report.html
-├── cucumber_report.json
-├── package.json
-├── README.md
-└── report.js
-`
+
+<pre lang="md"> ``` ├── .github │ └── workflows │ └── node-tests.yml ├── features │ └── user │ ├── DeleteUserWithId.feature │ ├── DeleteUserWithIdNonExistent.feature │ ├── GetShowAllUsers.feature │ ├── GetShowUserWithId.feature │ ├── GetShowUserWithIdNonExistent.feature │ ├── PostCreateNewAdminUser.feature │ ├── PostCreateNewUser.feature │ ├── PostLogin.feature │ ├── PostLoginFail.feature │ ├── PostTryCreateUserExisting.feature │ ├── PostTryCreateUserWithInvalidInformations.feature │ ├── PutChangeUserNonExistent.feature │ └── PutChangeUserWithId.feature ├── page_objects │ └── EndPoints.js ├── step_definitions │ ├── CreateNewUser_steps.js │ ├── DeleteUserWithId_steps.js │ ├── ShowAllUsers_steps.js │ ├── UserChange_steps.js │ └── ShowUserWithId_steps.js ├── support │ └── world.js ├── .gitignore ├── cucumber.js ├── cucumber_report.html ├── cucumber_report.json ├── package.json ├── README.md └── report.js ``` </pre>
 
 ## Tecnologias Utilizadas
 
