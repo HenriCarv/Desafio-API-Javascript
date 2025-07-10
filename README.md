@@ -19,11 +19,43 @@ npm run test ; npm run report - Para rodar todos os testes e ter um report.
 npm run loginFail ; npm run report - Para rodar teste expecifico e ter o report.
 
 ## Estrutura do Projeto
-
-- `features/`: Contém os arquivos de feature do Cucumber
-- `step_definitions/`: Contém as definições dos passos do Cucumber
-- `page_objects/`: Contém os EndPoints utilizados e tratamentos de response code
-- `support/`: Contém arquivos de suporte, como configurações do mundo do Cucumber
+`
+├── .github
+│   └── workflows
+│       └── node-tests.yml
+├── features
+│   └── user
+│       ├── DeleteUserWithId.feature
+│       ├── DeleteUserWithIdNonExistent.feature
+│       ├── GetShowAllUsers.feature
+│       ├── GetShowUserWithId.feature
+│       ├── GetShowUserWithIdNonExistent.feature
+│       ├── PostCreateNewAdminUser.feature
+│       ├── PostCreateNewUser.feature
+│       ├── PostLogin.feature
+│       ├── PostLoginFail.feature
+│       ├── PostTryCreateUserExisting.feature
+│       ├── PostTryCreateUserWithInvalidInformations.feature
+│       ├── PutChangeUserNonExistent.feature
+│       └── PutChangeUserWithId.feature
+├── page_objects
+│   └── EndPoints.js
+├── step_definitions
+│   ├── CreateNewUser_steps.js
+│   ├── DeleteUserWithId_steps.js
+│   ├── ShowAllUsers_steps.js
+│   ├── UserChange_steps.js
+│   └── ShowUserWithId_steps.js
+├── support
+│   └── world.js
+├── .gitignore
+├── cucumber.js
+├── cucumber_report.html
+├── cucumber_report.json
+├── package.json
+├── README.md
+└── report.js
+`
 
 ## Tecnologias Utilizadas
 
@@ -36,8 +68,13 @@ npm run loginFail ; npm run report - Para rodar teste expecifico e ter o report.
 
 Os testes cobrem as seguintes operações:
 
-- LOGIN
-- USUÁRIOS
+### Usuários
+1. Criação de Usuário (POST /usuarios)
+2. Listagem de Usuários (GET /usuarios)
+3. Busca de Usuário Específico (GET /usuarios/{id})
+4. Atualização de Usuário (PUT /usuarios/{id})
+5. Exclusão de Usuário (DELETE /usuarios/{id})
+
 
 1. Testes planejados:
 
@@ -74,6 +111,18 @@ Os testes cobrem as seguintes operações:
 2. Testes de Autenticação:
    - Login com credenciais válidas
    - Tentar login com credenciais inválidas
+
+## CI/CD
+
+Este projeto utiliza GitHub Actions para execução automática dos testes. O workflow está configurado para rodar os testes em cada push e pull request para a branch principal.
+
+## Relatórios
+
+Após a execução dos testes, um relatório HTML é gerado automaticamente. Este relatório pode ser encontrado como um artefato na execução do workflow do GitHub Actions.
+
+## Observações
+
+Há um problema conhecido na atualização de usuários inexistentes, onde a API responde com um código de status 201 e cria um novo usuário em vez de retornar um erro.
 
 ## Autores
 
