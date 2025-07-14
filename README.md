@@ -7,7 +7,7 @@
 
 1. Clone o repositório:
 
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/seu-usuario/seu-repositorio.git](https://github.com/HenriCarv/Desafio-API-Javascript.git
    cd seu-repositorio
 
 2. Instale as dependências:
