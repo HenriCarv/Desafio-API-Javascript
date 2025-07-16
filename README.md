@@ -3,6 +3,11 @@
    Este projeto contém testes automatizados para a API de gerenciamento de usuários usando Cucumber.js e Pactum.JS.
    Englobando os testes
 
+## Pré-requisitos
+
+   - Node.js (versão 14.x ou superior)
+   - npm (geralmente vem com o Node.js)
+
 ## Configuração
 
 1. Clone o repositório:
@@ -80,11 +85,11 @@
 
 ## Tecnologias Utilizadas
 
-   - Cucumber.js
-   - Pactum.JS
-   - Chai (para asserções)
-   - Cucumber-html-reporter
-
+   - Cucumber.js (versão 7.x)
+   - Pactum.JS (versão 3.x)
+   - Chai (versão 4.x)
+   - cucumber-html-reporter (versão 5.x)
+   
 ## Cobertura de Testes
 
    Os testes cobrem as seguintes operações:
