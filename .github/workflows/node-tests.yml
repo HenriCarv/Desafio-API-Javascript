@@ -24,24 +24,29 @@ jobs:
 
       - name: Run Cucumber tests
         run: npm test
-        
+
       - name: Generate HTML Report
         if: always()
-        run: npm run report
+        run: |
+          if [ -f results/cucumber-report.json ]; then
+            npm run report
+          else
+            echo "❌ cucumber-report.json não encontrado. Pulando geração do relatório."
+          fi
 
       - name: Upload Cucumber JSON report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-json-report
-          path: cucumber_report.json
+          path: results/cucumber-report.json
 
       - name: Upload HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-html-report
-          path: cucumber_report.html
+          path: results/cucumber-report.html
 
       - name: Archive test results
         if: always()
@@ -49,5 +54,5 @@ jobs:
         with:
           name: test-results
           path: |
-            cucumber_report.json
-            cucumber_report.html
+            results/cucumber-report.json
+            results/cucumber-report.html
